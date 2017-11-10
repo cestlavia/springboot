@@ -1,0 +1,5 @@
+mapper文件路径的配置原因导致：Mapper类和Mapper.xml文件绑定出错，
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found)
+可能是位置原因，也可能是属性的配置错误
+通过maven的pom文件的build->resource将位于src/main/java路径下的*.xml文件打包到jar包中，
+并在application.properties文件中配置正确的mabatis.mapper-locations可解决这个错误

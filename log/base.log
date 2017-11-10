@@ -1,0 +1,75 @@
+2017-11-10 13:14:31,804 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1218 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 13:14:31,825 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 13:14:31,826 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 13:19:43,941 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1227 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 13:19:43,955 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 13:19:43,957 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 13:21:09,490 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1233 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 13:21:09,505 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 13:21:09,507 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 13:21:14,171 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 5.275 seconds (JVM running for 6.793)
+2017-11-10 13:22:15,774 INFO (HelloWorld.java:22)- i am a slf4j Log
+2017-11-10 13:26:01,655 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1242 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 13:26:01,664 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 13:26:01,665 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 13:26:04,092 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 13:26:05,726 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.737 seconds (JVM running for 6.623)
+2017-11-10 13:26:40,113 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
+2017-11-10 13:34:05,169 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1364 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 13:34:05,178 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 13:34:05,179 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 13:34:07,641 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 13:41:24,346 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1429 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 13:41:24,354 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 13:41:24,355 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 13:41:26,879 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 13:41:28,417 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.841 seconds (JVM running for 6.766)
+2017-11-10 13:42:20,982 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
+2017-11-10 13:48:43,861 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1434 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 13:48:43,884 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 13:48:43,884 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 13:48:46,185 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 13:48:47,249 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 3.791 seconds (JVM running for 5.054)
+2017-11-10 13:50:24,617 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
+2017-11-10 14:05:26,623 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1482 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 14:05:26,644 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 14:05:26,644 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 14:05:29,560 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 14:05:31,306 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 5.343 seconds (JVM running for 7.352)
+2017-11-10 14:07:33,373 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1526 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 14:07:33,380 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 14:07:33,381 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 14:07:35,472 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 14:07:37,172 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.185 seconds (JVM running for 6.475)
+2017-11-10 14:08:34,690 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
+2017-11-10 14:14:09,393 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1542 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 14:14:09,410 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 14:14:09,410 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 14:14:11,960 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 14:14:13,369 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.593 seconds (JVM running for 6.652)
+2017-11-10 14:14:23,696 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
+2017-11-10 15:01:35,193 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1681 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 15:01:35,214 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 15:01:35,215 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 15:01:38,036 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 15:01:39,474 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.938 seconds (JVM running for 6.632)
+2017-11-10 15:02:00,366 ERROR (HelloWorld.java:44)- method[getTicketODByTicketId] error!!!
+2017-11-10 15:04:18,442 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1730 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 15:04:18,464 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 15:04:18,465 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 15:04:21,013 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 15:04:22,708 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.715 seconds (JVM running for 6.276)
+2017-11-10 15:04:38,562 ERROR (HelloWorld.java:42)- method[getTicketODByTicketId] error!!!
+2017-11-10 15:06:33,840 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1746 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-10 15:06:33,850 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-10 15:06:33,851 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-10 15:06:35,718 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-10 15:06:36,896 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 3.591 seconds (JVM running for 4.944)
+2017-11-10 15:06:48,732 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT PLANE_TICKET_ID, PLANE_OD_ID FROM T_CC_TICKET_OD WHERE PLANE_OD_ID = ? 
+2017-11-10 15:06:48,866 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 577(Long)
+2017-11-10 15:06:48,955 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
+2017-11-10 15:06:49,088 INFO (HelloWorld.java:36)- tickeOD infos ：[{"planeTicketId":1375,"planeOdId":577},{"planeTicketId":1376,"planeOdId":577}]
+2017-11-10 15:06:49,089 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT PLANE_TICKET_ID, PLANE_OD_ID FROM T_CC_TICKET_OD WHERE PLANE_TICKET_ID = ? 
+2017-11-10 15:06:49,090 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1375(Long)
+2017-11-10 15:06:49,140 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+2017-11-10 15:06:49,142 INFO (HelloWorld.java:39)- 577: Plane OD id
