@@ -1,75 +1,382 @@
-2017-11-10 13:14:31,804 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1218 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 13:14:31,825 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 13:14:31,826 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 13:19:43,941 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1227 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 13:19:43,955 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 13:19:43,957 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 13:21:09,490 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1233 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 13:21:09,505 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 13:21:09,507 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 13:21:14,171 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 5.275 seconds (JVM running for 6.793)
-2017-11-10 13:22:15,774 INFO (HelloWorld.java:22)- i am a slf4j Log
-2017-11-10 13:26:01,655 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1242 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 13:26:01,664 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 13:26:01,665 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 13:26:04,092 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 13:26:05,726 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.737 seconds (JVM running for 6.623)
-2017-11-10 13:26:40,113 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
-2017-11-10 13:34:05,169 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1364 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 13:34:05,178 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 13:34:05,179 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 13:34:07,641 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 13:41:24,346 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1429 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 13:41:24,354 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 13:41:24,355 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 13:41:26,879 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 13:41:28,417 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.841 seconds (JVM running for 6.766)
-2017-11-10 13:42:20,982 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
-2017-11-10 13:48:43,861 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1434 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 13:48:43,884 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 13:48:43,884 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 13:48:46,185 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 13:48:47,249 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 3.791 seconds (JVM running for 5.054)
-2017-11-10 13:50:24,617 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
-2017-11-10 14:05:26,623 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1482 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 14:05:26,644 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 14:05:26,644 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 14:05:29,560 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 14:05:31,306 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 5.343 seconds (JVM running for 7.352)
-2017-11-10 14:07:33,373 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1526 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 14:07:33,380 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 14:07:33,381 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 14:07:35,472 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 14:07:37,172 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.185 seconds (JVM running for 6.475)
-2017-11-10 14:08:34,690 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
-2017-11-10 14:14:09,393 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1542 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 14:14:09,410 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 14:14:09,410 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 14:14:11,960 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 14:14:13,369 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.593 seconds (JVM running for 6.652)
-2017-11-10 14:14:23,696 ERROR (HelloWorld.java:37)- method[getTicketODByTicketId] error!!!
-2017-11-10 15:01:35,193 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1681 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 15:01:35,214 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 15:01:35,215 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 15:01:38,036 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 15:01:39,474 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.938 seconds (JVM running for 6.632)
-2017-11-10 15:02:00,366 ERROR (HelloWorld.java:44)- method[getTicketODByTicketId] error!!!
-2017-11-10 15:04:18,442 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1730 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 15:04:18,464 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 15:04:18,465 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 15:04:21,013 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 15:04:22,708 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.715 seconds (JVM running for 6.276)
-2017-11-10 15:04:38,562 ERROR (HelloWorld.java:42)- method[getTicketODByTicketId] error!!!
-2017-11-10 15:06:33,840 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 1746 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
-2017-11-10 15:06:33,850 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
-2017-11-10 15:06:33,851 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
-2017-11-10 15:06:35,718 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
-2017-11-10 15:06:36,896 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 3.591 seconds (JVM running for 4.944)
-2017-11-10 15:06:48,732 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT PLANE_TICKET_ID, PLANE_OD_ID FROM T_CC_TICKET_OD WHERE PLANE_OD_ID = ? 
-2017-11-10 15:06:48,866 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 577(Long)
-2017-11-10 15:06:48,955 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 2
-2017-11-10 15:06:49,088 INFO (HelloWorld.java:36)- tickeOD infos ：[{"planeTicketId":1375,"planeOdId":577},{"planeTicketId":1376,"planeOdId":577}]
-2017-11-10 15:06:49,089 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT PLANE_TICKET_ID, PLANE_OD_ID FROM T_CC_TICKET_OD WHERE PLANE_TICKET_ID = ? 
-2017-11-10 15:06:49,090 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 1375(Long)
-2017-11-10 15:06:49,140 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
-2017-11-10 15:06:49,142 INFO (HelloWorld.java:39)- 577: Plane OD id
+2017-11-14 10:41:30,453 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 2298 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-14 10:41:30,476 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-14 10:41:30,477 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-14 10:41:34,880 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-14 10:48:54,220 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 2314 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-14 10:48:54,251 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-14 10:48:54,253 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-14 10:48:57,247 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-14 10:49:12,996 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 2319 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-14 10:49:13,014 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-14 10:49:13,024 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-14 10:49:15,822 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-14 10:49:17,497 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.922 seconds (JVM running for 6.097)
+2017-11-14 10:50:31,048 INFO (HelloWorld.java:29)- i am a slf4j Log
+2017-11-14 10:52:02,293 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 2326 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-14 10:52:02,307 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-14 10:52:02,307 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-14 10:52:04,546 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-14 10:52:06,058 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.253 seconds (JVM running for 5.565)
+2017-11-14 10:58:32,864 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 2333 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-14 10:58:32,875 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-14 10:58:32,876 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-14 10:58:35,170 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-14 10:58:37,254 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 4.856 seconds (JVM running for 6.464)
+2017-11-14 10:58:50,219 ERROR (TicketService.java:45)- Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@1337b742; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@1337b742; line: 1, column: 1]
+org.springframework.data.redis.serializer.SerializationException: Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@1337b742; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@1337b742; line: 1, column: 1]
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:73)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeValue(AbstractOperations.java:318)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:58)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:207)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:43)
+	at com.springboot.study.service.TicketService.getFromRedis(TicketService.java:40)
+	at com.springboot.study.controller.HelloWorld.redistest(HelloWorld.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:871)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:902)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@1337b742; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270)
+	at com.fasterxml.jackson.databind.DeserializationContext.wrongTokenException(DeserializationContext.java:1376)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportWrongTokenException(DeserializationContext.java:1197)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._locateTypeId(AsArrayTypeDeserializer.java:137)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._deserialize(AsArrayTypeDeserializer.java:96)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer.deserializeTypedFromAny(AsArrayTypeDeserializer.java:71)
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserializeWithType(UntypedObjectDeserializer.java:553)
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:63)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2983)
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:71)
+	... 66 common frames omitted
+2017-11-14 11:03:12,226 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 2347 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-14 11:03:12,245 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-14 11:03:12,246 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-14 11:03:15,004 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-14 11:03:17,352 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 5.634 seconds (JVM running for 7.5)
+2017-11-14 11:03:25,584 ERROR (TicketService.java:45)- Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@6ae87b2a; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@6ae87b2a; line: 1, column: 1]
+org.springframework.data.redis.serializer.SerializationException: Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@6ae87b2a; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@6ae87b2a; line: 1, column: 1]
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:73)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeValue(AbstractOperations.java:318)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:58)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:207)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:43)
+	at com.springboot.study.service.TicketService.getFromRedis(TicketService.java:40)
+	at com.springboot.study.controller.HelloWorld.redistest(HelloWorld.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:871)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:902)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@6ae87b2a; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270)
+	at com.fasterxml.jackson.databind.DeserializationContext.wrongTokenException(DeserializationContext.java:1376)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportWrongTokenException(DeserializationContext.java:1197)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._locateTypeId(AsArrayTypeDeserializer.java:137)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._deserialize(AsArrayTypeDeserializer.java:96)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer.deserializeTypedFromAny(AsArrayTypeDeserializer.java:71)
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserializeWithType(UntypedObjectDeserializer.java:553)
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:63)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2983)
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:71)
+	... 66 common frames omitted
+2017-11-14 11:05:08,457 ERROR (TicketService.java:45)- Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@759569fd; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@759569fd; line: 1, column: 1]
+org.springframework.data.redis.serializer.SerializationException: Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@759569fd; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@759569fd; line: 1, column: 1]
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:73)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeValue(AbstractOperations.java:318)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:58)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:207)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:43)
+	at com.springboot.study.service.TicketService.getFromRedis(TicketService.java:40)
+	at com.springboot.study.controller.HelloWorld.redistest(HelloWorld.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:871)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:902)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@759569fd; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270)
+	at com.fasterxml.jackson.databind.DeserializationContext.wrongTokenException(DeserializationContext.java:1376)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportWrongTokenException(DeserializationContext.java:1197)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._locateTypeId(AsArrayTypeDeserializer.java:137)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._deserialize(AsArrayTypeDeserializer.java:96)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer.deserializeTypedFromAny(AsArrayTypeDeserializer.java:71)
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserializeWithType(UntypedObjectDeserializer.java:553)
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:63)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2983)
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:71)
+	... 66 common frames omitted
+2017-11-14 11:18:25,295 INFO (StartupInfoLogger.java:48)- Starting StudyApplication on luopans-mac-mini.local with PID 2379 (/Users/luopan/IdeaProjects/study/target/classes started by luopan in /Users/luopan/IdeaProjects/study)
+2017-11-14 11:18:25,307 DEBUG (StartupInfoLogger.java:51)- Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+2017-11-14 11:18:25,308 INFO (SpringApplication.java:593)- No active profile set, falling back to default profiles: default
+2017-11-14 11:18:27,761 ERROR (WebConfiguration.java:16)- RemoteIpFilter executed
+2017-11-14 11:18:29,849 INFO (StartupInfoLogger.java:57)- Started StudyApplication in 5.003 seconds (JVM running for 6.518)
+2017-11-14 11:19:15,854 ERROR (TicketService.java:50)- Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@356c8dfc; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@356c8dfc; line: 1, column: 1]
+org.springframework.data.redis.serializer.SerializationException: Could not read JSON: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@356c8dfc; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@356c8dfc; line: 1, column: 1]
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:73)
+	at org.springframework.data.redis.core.AbstractOperations.deserializeValue(AbstractOperations.java:318)
+	at org.springframework.data.redis.core.AbstractOperations$ValueDeserializingRedisCallback.doInRedis(AbstractOperations.java:58)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:207)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:43)
+	at com.springboot.study.service.TicketService.getFromRedis(TicketService.java:48)
+	at com.springboot.study.controller.HelloWorld.redistest(HelloWorld.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:871)
+	at org.apache.catalina.filters.RemoteIpFilter.doFilter(RemoteIpFilter.java:902)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Unexpected token (START_OBJECT), expected START_ARRAY: need JSON Array to contain As.WRAPPER_ARRAY type information for class java.lang.Object
+ at [Source: [B@356c8dfc; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270)
+	at com.fasterxml.jackson.databind.DeserializationContext.wrongTokenException(DeserializationContext.java:1376)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportWrongTokenException(DeserializationContext.java:1197)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._locateTypeId(AsArrayTypeDeserializer.java:137)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer._deserialize(AsArrayTypeDeserializer.java:96)
+	at com.fasterxml.jackson.databind.jsontype.impl.AsArrayTypeDeserializer.deserializeTypedFromAny(AsArrayTypeDeserializer.java:71)
+	at com.fasterxml.jackson.databind.deser.std.UntypedObjectDeserializer$Vanilla.deserializeWithType(UntypedObjectDeserializer.java:553)
+	at com.fasterxml.jackson.databind.deser.impl.TypeWrappedDeserializer.deserialize(TypeWrappedDeserializer.java:63)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3814)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2983)
+	at org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer.deserialize(Jackson2JsonRedisSerializer.java:71)
+	... 66 common frames omitted

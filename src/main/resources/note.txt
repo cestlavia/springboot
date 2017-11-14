@@ -1,5 +1,9 @@
 mapper文件路径的配置原因导致：Mapper类和Mapper.xml文件绑定出错，
 org.apache.ibatis.binding.BindingException: Invalid bound statement (not found)
 可能是位置原因，也可能是属性的配置错误
+一般的原因是Mapper interface和xml文件的定义对应不上，需要检查包名，namespace，函数名称等能否对应上
 通过maven的pom文件的build->resource将位于src/main/java路径下的*.xml文件打包到jar包中，
 并在application.properties文件中配置正确的mabatis.mapper-locations可解决这个错误
+
+加入Redis后，由于没有在application.properties中设置Spring session的存储方式，导致报错
+java.lang.IllegalArgumentException: No Spring Session store is configured: set the 'spring.session.store-type' property
