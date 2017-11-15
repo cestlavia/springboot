@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.springboot.study.domain.entity.User;
 import com.springboot.study.entity.TicketOD;
 import com.springboot.study.service.TicketService;
+import com.springboot.study.vo.Book;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.Random;
 
 @RestController
+@RequestMapping("/hello")
 public class HelloWorld {
 
     private static Logger log = LoggerFactory.getLogger(HelloWorld.class);
@@ -27,18 +29,26 @@ public class HelloWorld {
     @Autowired
     private TicketService ticketService;
 
-    @RequestMapping("/hello")
+    @Autowired
+    private Book book;
+
+    @RequestMapping("")
     public String index() {
         log.info("i am a slf4j Log");
-        return "hello Spring boot";
+        return "hello Spring boot ";
     }
 
-    @RequestMapping("/hello/{name}")
+    @RequestMapping("/book")
+    public String book() {
+        return "book info : name - " + book.getName() + "/r/n author - " + book.getAuthor();
+    }
+
+    @RequestMapping("/{name}")
     public String test(@PathVariable String name) {
         Long ticketId = 1375l;
 
         try {
-            List<TicketOD> tos =ticketService.getTicketListByOd(577L);
+            List<TicketOD> tos = ticketService.getTicketListByOd(577L);
             ObjectMapper mapper = new ObjectMapper();
             // 将查询结果对象转换为json字符串
             log.info("tickeOD infos ：" + mapper.writeValueAsString(tos));
@@ -61,10 +71,12 @@ public class HelloWorld {
     public String modelTest(HttpServletRequest request, @ModelAttribute User user) {
         return "asdfa";
     }
-    @RequestMapping("/hello/redis")
+
+    @RequestMapping("/redis")
     public String redistest() {
         return ticketService.getFromRedis("AUIDT_ORDER:6540");
     }
+
     public static void main(String[] args) {
         System.out.println();
         Random r = new Random(100);

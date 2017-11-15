@@ -5,5 +5,9 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found)
 通过maven的pom文件的build->resource将位于src/main/java路径下的*.xml文件打包到jar包中，
 并在application.properties文件中配置正确的mabatis.mapper-locations可解决这个错误
 
-加入Redis后，由于没有在application.properties中设置Spring session的存储方式，导致报错
+依赖spring-session-data-redis.jar后，由于没有在application.properties中设置Spring session的存储方式，导致报错
 java.lang.IllegalArgumentException: No Spring Session store is configured: set the 'spring.session.store-type' property
+
+
+用@Controller、@RestController时，如果用@Controller("/bulaubla")、@RestController("/bulaubla")，在执行请求时会报错"No Adaptor"；
+而用@Controller、@RestController和@RequestMapping("bula")组合时，可以正常执行访问。

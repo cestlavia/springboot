@@ -19,7 +19,13 @@ public class MobileService {
             // 创建webService
             MobileCodeWS ws = new MobileCodeWS();
             // 获取代理对象
-            MobileCodeWSSoap mobileCodeWSSoap = ws.getMobileCodeWSSoap();
+            MobileCodeWSSoap mobileCodeWSSoap = null;
+            try {
+                mobileCodeWSSoap = ws.getMobileCodeWSSoap();
+            } catch (Exception e) {
+                log.error("获取WebService服务失败！");
+            }
+
             // 调用服务端方法
             localInfo = mobileCodeWSSoap.getMobileCodeInfo(mobileNo, null);
             ObjectMapper o = new ObjectMapper();
