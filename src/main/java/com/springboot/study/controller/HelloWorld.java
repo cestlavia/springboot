@@ -3,15 +3,18 @@ package com.springboot.study.controller;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.springboot.study.domain.entity.User;
 import com.springboot.study.entity.TicketOD;
 import com.springboot.study.service.TicketService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -54,6 +57,10 @@ public class HelloWorld {
     }
 
 
+    @RequestMapping("/model")
+    public String modelTest(HttpServletRequest request, @ModelAttribute User user) {
+        return "asdfa";
+    }
     @RequestMapping("/hello/redis")
     public String redistest() {
         return ticketService.getFromRedis("AUIDT_ORDER:6540");
