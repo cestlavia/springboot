@@ -39,10 +39,18 @@ public class MobileService {
         return localInfo;
     }
 
-    /*public static void main(String[] args) {
-        MobileCodeWS ws = new MobileCodeWS();
-        MobileCodeWSSoap soap = ws.getMobileCodeWSSoap();
+    public static void main(String[] args) {
+        MobileCodeWSSoap soap = null;
+
+        try {
+            MobileCodeWS ws = new MobileCodeWS();
+            soap = ws.getMobileCodeWSSoap();
+        } catch (Exception e) {
+            log.error("获取服务失败", e);
+        }
+
+
         String mobileCodeInfo = soap.getMobileCodeInfo("18501580123", null);
         System.out.println(mobileCodeInfo);
-    }*/
+    }
 }
