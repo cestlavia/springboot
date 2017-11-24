@@ -1,0 +1,2685 @@
+<?xml version='1.0' encoding='utf-8'?><wsdl:definitions name="SpringServiceSearchBookInterfaceService" targetNamespace="http://wsinterface.remoteservice.booking.springairlines.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://wsinterface.remoteservice.booking.springairlines.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://wsinterface.remoteservice.booking.springairlines.com/" xmlns:tns="http://wsinterface.remoteservice.booking.springairlines.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType abstract="true" name="commonInParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usernameToken" type="tns:usernameToken"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usernameToken">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="password" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="username" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getKeguiTotalDescriptionInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cabin" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="cabinType" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="seat_type" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="segmentHeadId" type="xs:long"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType abstract="true" name="commonOutParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ifSuccess" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getKeguiTotalDescriptionResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="keguiDesctiption" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="keguiInfo" type="tns:keguiMultInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="keguiMultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bag_desc" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="change_desc" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="memo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="name_desc" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="return_desc" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seat_type" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="segment_id" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCountryAreaCodeSearchBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getCountryAreaCodeResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="countryAreaList" nillable="true" type="tns:countryAreaInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countryAreaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="countryCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="countryName" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchFlightsBySegIdBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="segment_head_id" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="searchFlightsBatchResultBean2">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="flightsList" nillable="true" type="tns:flightInfo2"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="flightInfo2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="flightBasicInfo" type="tns:flightBasicInfo"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="normSeatPriceList" nillable="true" type="tns:normSeatPriceInfo2"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="superSeatPriceList" nillable="true" type="tns:superSeatPriceInfo2"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flightBasicInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acType" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="destEndPoint" type="tns:flightEndPointInfo"></xs:element>
+      <xs:element minOccurs="0" name="firstStopover" type="tns:flightEndPointInfo"></xs:element>
+      <xs:element minOccurs="0" name="flightNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightStatus" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="fuelFee" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="oriEndPoint" type="tns:flightEndPointInfo"></xs:element>
+      <xs:element minOccurs="0" name="portPay" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="pubPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="routeAreaFlag" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="secondStopover" type="tns:flightEndPointInfo"></xs:element>
+      <xs:element minOccurs="0" name="segHeadId" type="xs:long"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flightEndPointInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="airportCityInfo" type="tns:airportCityInfo"></xs:element>
+      <xs:element minOccurs="0" name="destTimeInfo" type="tns:flightTimeInfo"></xs:element>
+      <xs:element minOccurs="0" name="oriTimeInfo" type="tns:flightTimeInfo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="airportCityInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="airportCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="airportName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="airportTerminal" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="cityCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="cityName" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flightTimeInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="localCityCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="timeBJ" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="timeLocal" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="timeLocalSys" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="normSeatPriceInfo2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="remSeatNum" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seatPrice" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="superSeatPriceInfo2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="remSeatNum" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="saleSegId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seatPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="subProdId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="subProdName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="subProdPrice" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSubProdBySegInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="adultCabinName" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="adultTktPrice" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="otherSegHeadId" type="xs:long"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="queryXtypeRange" nillable="true" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="thisSegHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="thisSegHeadType" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="tktType" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="userType" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getSubProdBySegResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="xprodList" nillable="true" type="tns:xprodBeanOfGetSubProd"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="xprodBeanOfGetSubProd">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="canBuyNum" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="insCompId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="otherInfo" type="xs:string"></xs:element>
+      <xs:element name="subProdCatId" type="xs:int"></xs:element>
+      <xs:element name="subProdId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="subProdName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="subProdPrice" type="xs:double"></xs:element>
+      <xs:element name="subProdTypeId" type="xs:long"></xs:element>
+      <xs:element name="subProdUserType" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelOrderInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="cancelOrderResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence></xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="queryFlightBgAppInfoInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appFlags" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="queryFlag" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="queryFlagId" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="queryFlightBgAppInfoResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="flightBgApps" nillable="true" type="tns:flightBgAppInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="flightBgAppInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="basicInfo" type="tns:flightBgAppBasicInfo"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="flightBgAppHeads" nillable="true" type="tns:flightBgAppHeadInfo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flightBgAppBasicInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appFlag" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="cancelTime" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="createTime" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="finishTime" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightBgAppId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="flightBgFy" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="payGateFy" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="payGateId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="shengcangMoney" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="submitTime" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flightBgAppHeadInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cardNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="cardTypeId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="familyName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightBgAppHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="flightBgAppId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="flightBgFy" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="newFlightInfo" type="tns:flightBasicInfo"></xs:element>
+      <xs:element minOccurs="0" name="newSeatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="newSeatNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="newSegHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="oldFlightInfo" type="tns:flightBasicInfo"></xs:element>
+      <xs:element minOccurs="0" name="oldSeatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="oldSeatNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="oldSegHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="oldTicketPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="payGateFy" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="personalName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seatSelectFlag" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="shengcangMoney" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="travellerType" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFlightBgAppInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="bgPairs" nillable="true" type="tns:bgPairInfo"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="remoteIP" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bgPairInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="segHeadId" type="xs:long"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFlightBgAppResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="failedOrderHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="flightBgAppInfo" type="tns:flightBgAppInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="submitFlightBgAppInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="flightBgAppId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="remoteIP" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="submitFlightBgAppResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="failedOrderHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="flightBgAppInfo" type="tns:flightBgAppInfo"></xs:element>
+          <xs:element minOccurs="0" name="payFlag" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="resubmitFlag" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="reqBeanOfCreateInvoice">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="e_mail" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flights_order_head_id" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="ghf_nsrsbh" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="invoiceHead" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="orderno" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="phoneNumber" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="qiyeType" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="retBeanofCreateInvoice">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="invoiceId" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getTravelBaoJiDetailInfoQueryBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="areaId" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="batchNo" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="codeNo" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flightsDate" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flightsNo" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="queryType" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="termId" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getTravelBaoJiDetailInfoResultBean1">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ticketList" nillable="true" type="tns:travelBaoJiInfo1"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="travelBaoJiInfo1">
+    <xs:complexContent>
+      <xs:extension base="tns:travelBaoJiInfo">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="baggageInfo" nillable="true" type="tns:baggageInfo"></xs:element>
+          <xs:element minOccurs="0" name="flights_order_head_id" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="travelBaoJiInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ad_fy" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="codeno" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="codetype" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="company_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="dest_airport" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="dest_airport_n" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="dest_cfd1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="dest_cfd1_n" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="dest_city" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="dest_city_n" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ex_cfd1" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ex_cfd1_n" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_date" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_no" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_order_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="lot_no" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="origin_airport" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="origin_airport_n" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="origin_city" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="origin_city_n" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="origin_std" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="other_fy" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="port_pay" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seats_name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="segment_head_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="sex" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="status" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="terminal_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ticket_no" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ticket_price" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="baggageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="baggageId" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="baggagePrice" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="baggageWeight" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOrderDetailInfoQueryBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getOrderDetailInfoResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderSumInfo" type="tns:orderSumInfo"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ticketList" nillable="true" type="tns:ticketInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="orderSumInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bookTime" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="linkmanName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="linkmanWorkTel" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="orderMoney" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="payFlag" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ticketInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="flightBasicInfo" type="tns:flightBasicInfo"></xs:element>
+      <xs:element minOccurs="0" name="passengerDetailInfo" type="tns:passengerDetailInfo"></xs:element>
+      <xs:element minOccurs="0" name="ticketBasicInfo" type="tns:ticketBasicInfo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="passengerDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="age" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="birthdate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="cardNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="cardTypeId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="countryOfIssue" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="familyName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="gender" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="nationality" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="passengerType" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="passportExpireDate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="personalName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="phoneNo" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ticketBasicInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fuelPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="insFee" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="lcHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="otherFy" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="payGateFy" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="portPay" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="segHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="tktFlag" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="tktNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="tktPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="tktType" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="wfHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="xprodFee" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchBeanOfSearchFlightsSP">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="destAirportCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="destCityCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flightDateBegin" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flightDateEnd" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flightDateGo" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="oriAirportCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="oriCityCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="searchFlag" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="searchFlightsBatchResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="flightsList" nillable="true" type="tns:flightInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="flightInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="flightBasicInfo" type="tns:flightBasicInfo"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="normSeatPriceList" nillable="true" type="tns:normSeatPriceInfo"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="superSeatPriceList" nillable="true" type="tns:superSeatPriceInfo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="normSeatPriceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seatPrice" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="superSeatPriceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="saleSegId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seatPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="subProdId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="subProdName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="subProdPrice" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="infoBeanOfGetSubProdByTkt">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="channelId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="flightsOrderHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="ifInsWF" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="queryXtypeRange" nillable="true" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="saleTypeDetail" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="userType" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="searchFlightsBatchSearchBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codeType" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="dateRangeFlag" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="destCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="oriCode" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="searchTicketDetailBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="codeType" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="codeno" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="orderId" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="searchTicketDetailResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="ifSuccess" type="xs:string"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ticketDetailInfoList" nillable="true" type="tns:ticketDetailInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ticketDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arriveDate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arriveTime" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="destAirport" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightId" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flyDate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flyTime" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="fuelPrice" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="insurancePrice" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="originAirport" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="otherPrice" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="poductPrice" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="portPrice" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="status" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ticketNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ticketPrice" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookSubProdBatchInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="bookList" nillable="true" type="tns:singleBookBeanOfBbookSubProdBatch"></xs:element>
+          <xs:element minOccurs="0" name="bookTimeFlag" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="ifInsWF" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="remoteIP" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="singleBookBeanOfBbookSubProdBatch">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="insurList" nillable="true" type="tns:insuranceBookInfo"></xs:element>
+      <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="xprodList" nillable="true" type="tns:xprodBookInfo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insuranceBookInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="insurBeneType" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="insurCompId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="insurNum" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="insurProdId" type="xs:long"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="xprodBookInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addInfo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="xprodId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="xprodNum" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookSubProdBatchResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="failedInsProdId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="failedOrderHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="failedXprodId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="subOrderId" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getTravelBaoJiDetailInfoResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="ticketList" nillable="true" type="tns:travelBaoJiInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="applyReturnTicketInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="applyReturnTicketResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence></xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="queryOrderInfoForSltQueryBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="queryType" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="ticketNoEnd" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="ticketNoStart" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="queryOrderInfoForSltResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="listOforderInfolist" nillable="true" type="tns:orderInfoForSltList"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="orderInfoForSltList">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="orderInfoForSltlist" nillable="true" type="tns:orderInfoForSlt"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderInfoForSlt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arrive_place" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="arrive_time" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="codeno" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_date" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_no" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_order_head_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_order_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flights_segment" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="leave_place" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="leave_time" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="MAC" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="MAD" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="MAE" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="nation_flag" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="order_date" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="other_fee" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="other_fy" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="out_ticket_date" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="sale_price" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="seats_name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="segment_price" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ticket_no" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ticket_status" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="username" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getMoneyClassSearchBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence></xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getMoneyClassResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="moneyClassList" nillable="true" type="tns:moneyClass"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="moneyClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="moneyClassCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flightSeatNoBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="channelId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="saleTypeDetail" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="xprodId" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getRetBeanOfQueryFlightSeatNo">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="flightSeatNoList" nillable="true" type="tns:retBeanOfQueryFlightSeatNo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="retBeanOfQueryFlightSeatNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cabinType" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ifCanSaleC" type="xs:int"></xs:element>
+      <xs:element name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element name="price" type="xs:double"></xs:element>
+      <xs:element name="seatId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="status" type="xs:string"></xs:element>
+      <xs:element name="x" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="xrowNo" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="xrowPos" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="y" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ycolNo" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="ycolPos" type="xs:string"></xs:element>
+      <xs:element name="z" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reqBeanOfTktDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="flights_order_head_id" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="orderno" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="retBeanOfTktDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="invoiceList" nillable="true" type="tns:invoiceInfo"></xs:element>
+          <xs:element minOccurs="0" name="linkMan" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkTel" type="xs:string"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="tktDetailInfoList" nillable="true" type="tns:tktDetailInfo"></xs:element>
+          <xs:element minOccurs="0" name="eMail" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="invoiceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="invoiceCreatdate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="invoiceHead" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="invoiceId" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="invoiceMoney" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="invoiceNo" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tktDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="destPort" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightsDate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightsNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ifInvoiceOk" type="xs:string"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="invoiceContentInfotList" nillable="true" type="tns:invoiceContentInfo"></xs:element>
+      <xs:element minOccurs="0" name="invoiceId" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="oriPort" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="proWay" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="travller" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="invoiceContentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="company_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="invoice_item" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="invoice_item_name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="isSpot" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="item_rate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="money_class_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="orderHeadID" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="payMoney" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="product_id" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="spbm" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="xtype_id" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cancelFlightBgAppInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="flightBgAppId" type="xs:long"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="cancelFlightBgAppResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence></xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bookOrderBookBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="adultNum" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="childNum" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="firstSegAdultCabin" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="firstSegId" type="xs:long"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="firstSegPassengerInfo" nillable="true" type="tns:passengerBookInfo"></xs:element>
+          <xs:element minOccurs="0" name="infantNum" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="lcType" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkmanAddr" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkmanEmail" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkmanMobile" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkmanName" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkmanPrivateTel" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkmanWorkTel" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="linkmanZip" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="remoteIp" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="secondSegAdultCabin" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="secondSegId" type="xs:long"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="secondSegPassengerInfo" nillable="true" type="tns:passengerBookInfo"></xs:element>
+          <xs:element minOccurs="0" name="thirdSegAdultCabin" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="thirdSegId" type="xs:long"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="thirdSegPassengerInfo" nillable="true" type="tns:passengerBookInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="passengerBookInfo">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="insuranceInfo" nillable="true" type="tns:insuranceBookInfo"></xs:element>
+      <xs:element minOccurs="0" name="passengerDetailInfo" type="tns:passengerDetailInfo"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="xprodInfo" nillable="true" type="tns:xprodBookInfo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bookOrderBookSubCabinBean">
+    <xs:complexContent>
+      <xs:extension base="tns:bookOrderBookBean">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="firstAdultCabinPrice" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="secondAdultCabinPrice" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="thirdAdultCabinPrice" type="xs:double"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bookOrderResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="payMoney" type="xs:double"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getOtherFyDetailInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getOtherFyDetailResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="otherFyDetailList" nillable="true" type="tns:otherFyDetailInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="otherFyDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fyMoney" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="fyName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="fyPolicyId" type="xs:long"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getFlightsCanBgInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateToBg" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getFlightsCanBgResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="flightsCanBg" nillable="true" type="tns:bgFlightInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="bgFlightInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="flightBasicInfo" type="tns:flightBasicInfo"></xs:element>
+      <xs:element minOccurs="0" name="seatInfo" type="tns:bgSeatInfo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bgSeatInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bgSeatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="bgShengcangMoney" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="flightSeatsInfoBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="saleType" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="saleTypeDetail" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="seatType" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="segmentHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="xproPkg" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getRetFlightSeatsBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="flightSeatsList" nillable="true" type="tns:retFlightSeatsBean"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="retFlightSeatsBean">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cabinType" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ifCanSaleC" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="price" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="seatId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="status" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="x" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="xrowNo" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="xrowPos" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="y" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ycolNo" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="ycolPos" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="z" type="xs:int"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="applyReturnTicketResultBean2">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="appIdStr" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getSpecificPriceInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="cabinNames" nillable="true" type="xs:string"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="cabinTypes" nillable="true" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="segHeadIds" nillable="true" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="segType" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getSpecificPriceResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="adultTravPriceForSeg" nillable="true" type="tns:priceCalcResult"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="childTravPriceForSeg" nillable="true" type="tns:priceCalcResult"></xs:element>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="infantTravPriceForSeg" nillable="true" type="tns:priceCalcResult"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="priceCalcResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cabinName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="cabinPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="fuelFee" type="xs:double"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="otherFeePolicy" nillable="true" type="tns:otherFeePolicy"></xs:element>
+      <xs:element minOccurs="0" name="otherFeeSum" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="portPay" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="otherFeePolicy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fyName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="fyPolicyFlag" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="fyPolicyId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="fyVal" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="xprodBeanOfCheckBindInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="thisSegHeadId" type="xs:long"></xs:element>
+          <xs:element minOccurs="0" name="thisSegHeadType" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="tktType" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="xprodBeanOfCheckBindResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="xprodBean" nillable="true" type="tns:xprodBeanOfCheckBind"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="xprodBeanOfCheckBind">
+    <xs:sequence>
+      <xs:element name="insCompId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+      <xs:element name="subProdCatId" type="xs:int"></xs:element>
+      <xs:element name="subProdId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="subProdName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="subProdPrice" type="xs:double"></xs:element>
+      <xs:element name="subProdTypeId" type="xs:long"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reqBeanOfGetInvoice">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="invoiceId" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="retBeanofGetInvoice">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cqUrl" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="hxUrl" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="infoBeanOfGetSubProdBooked">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="lang" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="querySig" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="sigType" type="xs:int"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getSubProdBookedResultBean">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ifSuccess" type="xs:string"></xs:element>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="xprodList" nillable="true" type="tns:xprodBeanOfGetSubProdBooked"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="xprodBeanOfGetSubProdBooked">
+    <xs:sequence>
+      <xs:element name="bookPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="cardNo" type="xs:string"></xs:element>
+      <xs:element name="cardTypeId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="cardTypeName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="companyId" type="xs:int"></xs:element>
+      <xs:element name="flagId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="flightsNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="inPkgCut" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="inPkgCutAll" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="insDldURL" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="ips" type="xs:string"></xs:element>
+      <xs:element name="moneyClassId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="moneyClassName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="oriTime" type="xs:string"></xs:element>
+      <xs:element name="oriTimeSys" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="originalCost" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="otherInfo" type="xs:string"></xs:element>
+      <xs:element name="otherOrderHeadId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="otherOrderNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="pkgOriginalCost" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="pkgPrice" type="xs:double"></xs:element>
+      <xs:element minOccurs="0" name="pkgProdName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="pkgXproId" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="seatName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="segment" type="xs:string"></xs:element>
+      <xs:element name="subProdId" type="xs:long"></xs:element>
+      <xs:element minOccurs="0" name="subProdName" type="xs:string"></xs:element>
+      <xs:element name="subProdTypeId" type="xs:long"></xs:element>
+      <xs:element name="travType" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="userFamName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="userPerName" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="yhqYouhuiMoney" type="xs:double"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getOrderSumInfoQueryBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderNo" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getOrderSumInfoResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderSumInfo" type="tns:orderSumInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="calcRetTktFeeInputBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderHeadId" type="xs:long"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="calcRetTktFeeResultBean">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="allRetMoney" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="moneyClassId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="notRefundOtherFy" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="payGateFy" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="payGateFyRate" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="qxxFy" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retFuelMoney" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retInsMoney" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retNetMoney" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retOtherFy" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retPortMoney" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retRealMoney" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retTktFy" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retTktMoney" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="retXFee" type="xs:double"></xs:element>
+          <xs:element minOccurs="0" name="returnFy" type="xs:double"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="searchBeanOfReceptionFlights">
+    <xs:complexContent>
+      <xs:extension base="tns:commonInParameter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="companyId" type="xs:int"></xs:element>
+          <xs:element minOccurs="0" name="destAirCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flightDate" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="flightNo" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="oriAirCode" type="xs:string"></xs:element>
+          <xs:element minOccurs="0" name="publishDate" type="xs:string"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getBeanOfReceptionFlights">
+    <xs:complexContent>
+      <xs:extension base="tns:commonOutParameter">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="receptionFlightsList" nillable="true" type="tns:receptionFlightsInfo"></xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="receptionFlightsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="destAirCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightDate" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="flightNo" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="localSta" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="localStd" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="oriAirCode" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="receptionMemo" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getKeguiTotalDescription2" type="tns:getKeguiTotalDescription2"></xs:element>
+  <xs:complexType name="getKeguiTotalDescription2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getKeguiTotalDescriptionInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getKeguiTotalDescription2Response" type="tns:getKeguiTotalDescription2Response"></xs:element>
+  <xs:complexType name="getKeguiTotalDescription2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getKeguiTotalDescriptionResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getCountryAreaCode" type="tns:getCountryAreaCode"></xs:element>
+  <xs:complexType name="getCountryAreaCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getCountryAreaCodeSearchBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getCountryAreaCodeResponse" type="tns:getCountryAreaCodeResponse"></xs:element>
+  <xs:complexType name="getCountryAreaCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getCountryAreaCodeResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBySegId2" type="tns:searchFlightsBySegId2"></xs:element>
+  <xs:complexType name="searchFlightsBySegId2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:searchFlightsBySegIdBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBySegId2Response" type="tns:searchFlightsBySegId2Response"></xs:element>
+  <xs:complexType name="searchFlightsBySegId2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:searchFlightsBatchResultBean2"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSubProdBySeg" type="tns:getSubProdBySeg"></xs:element>
+  <xs:complexType name="getSubProdBySeg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getSubProdBySegInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSubProdBySegResponse" type="tns:getSubProdBySegResponse"></xs:element>
+  <xs:complexType name="getSubProdBySegResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getSubProdBySegResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cancelOrder" type="tns:cancelOrder"></xs:element>
+  <xs:complexType name="cancelOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cancelInfo" type="tns:cancelOrderInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cancelOrderResponse" type="tns:cancelOrderResponse"></xs:element>
+  <xs:complexType name="cancelOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cancelOrderResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryFlightBgAppInfo" type="tns:queryFlightBgAppInfo"></xs:element>
+  <xs:complexType name="queryFlightBgAppInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:queryFlightBgAppInfoInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryFlightBgAppInfoResponse" type="tns:queryFlightBgAppInfoResponse"></xs:element>
+  <xs:complexType name="queryFlightBgAppInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:queryFlightBgAppInfoResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getKeguiTotalDescription" type="tns:getKeguiTotalDescription"></xs:element>
+  <xs:complexType name="getKeguiTotalDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getKeguiTotalDescriptionInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getKeguiTotalDescriptionResponse" type="tns:getKeguiTotalDescriptionResponse"></xs:element>
+  <xs:complexType name="getKeguiTotalDescriptionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getKeguiTotalDescriptionResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getFlightBgApp" type="tns:getFlightBgApp"></xs:element>
+  <xs:complexType name="getFlightBgApp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getFlightBgAppInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getFlightBgAppResponse" type="tns:getFlightBgAppResponse"></xs:element>
+  <xs:complexType name="getFlightBgAppResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getFlightBgAppResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="submitFlightBgApp2" type="tns:submitFlightBgApp2"></xs:element>
+  <xs:complexType name="submitFlightBgApp2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:submitFlightBgAppInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="submitFlightBgApp2Response" type="tns:submitFlightBgApp2Response"></xs:element>
+  <xs:complexType name="submitFlightBgApp2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:submitFlightBgAppResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateInvoice" type="tns:CreateInvoice"></xs:element>
+  <xs:complexType name="CreateInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqBean" type="tns:reqBeanOfCreateInvoice"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateInvoiceResponse" type="tns:CreateInvoiceResponse"></xs:element>
+  <xs:complexType name="CreateInvoiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:retBeanofCreateInvoice"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getTravelBaoJiDetailInfo1" type="tns:getTravelBaoJiDetailInfo1"></xs:element>
+  <xs:complexType name="getTravelBaoJiDetailInfo1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="queryInfo" type="tns:getTravelBaoJiDetailInfoQueryBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getTravelBaoJiDetailInfo1Response" type="tns:getTravelBaoJiDetailInfo1Response"></xs:element>
+  <xs:complexType name="getTravelBaoJiDetailInfo1Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getTravelBaoJiDetailInfoResultBean1"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getOrderDetailInfo" type="tns:getOrderDetailInfo"></xs:element>
+  <xs:complexType name="getOrderDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="queryInfo" type="tns:getOrderDetailInfoQueryBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getOrderDetailInfoResponse" type="tns:getOrderDetailInfoResponse"></xs:element>
+  <xs:complexType name="getOrderDetailInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getOrderDetailInfoResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBatchSP" type="tns:searchFlightsBatchSP"></xs:element>
+  <xs:complexType name="searchFlightsBatchSP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:searchBeanOfSearchFlightsSP"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBatchSPResponse" type="tns:searchFlightsBatchSPResponse"></xs:element>
+  <xs:complexType name="searchFlightsBatchSPResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:searchFlightsBatchResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSubProdByTkt" type="tns:getSubProdByTkt"></xs:element>
+  <xs:complexType name="getSubProdByTkt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:infoBeanOfGetSubProdByTkt"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSubProdByTktResponse" type="tns:getSubProdByTktResponse"></xs:element>
+  <xs:complexType name="getSubProdByTktResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getSubProdBySegResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBatch" type="tns:searchFlightsBatch"></xs:element>
+  <xs:complexType name="searchFlightsBatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:searchFlightsBatchSearchBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBatchResponse" type="tns:searchFlightsBatchResponse"></xs:element>
+  <xs:complexType name="searchFlightsBatchResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:searchFlightsBatchResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchTicketDetail" type="tns:searchTicketDetail"></xs:element>
+  <xs:complexType name="searchTicketDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:searchTicketDetailBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchTicketDetailResponse" type="tns:searchTicketDetailResponse"></xs:element>
+  <xs:complexType name="searchTicketDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:searchTicketDetailResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookSubProdBatch" type="tns:bookSubProdBatch"></xs:element>
+  <xs:complexType name="bookSubProdBatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bookInfo" type="tns:bookSubProdBatchInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookSubProdBatchResponse" type="tns:bookSubProdBatchResponse"></xs:element>
+  <xs:complexType name="bookSubProdBatchResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bookSubProdBatchResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getTravelBaoJiDetailInfo" type="tns:getTravelBaoJiDetailInfo"></xs:element>
+  <xs:complexType name="getTravelBaoJiDetailInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="queryInfo" type="tns:getTravelBaoJiDetailInfoQueryBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getTravelBaoJiDetailInfoResponse" type="tns:getTravelBaoJiDetailInfoResponse"></xs:element>
+  <xs:complexType name="getTravelBaoJiDetailInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getTravelBaoJiDetailInfoResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="applyReturnTicket" type="tns:applyReturnTicket"></xs:element>
+  <xs:complexType name="applyReturnTicket">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appInfo" type="tns:applyReturnTicketInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="applyReturnTicketResponse" type="tns:applyReturnTicketResponse"></xs:element>
+  <xs:complexType name="applyReturnTicketResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:applyReturnTicketResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryOrderInfoForSlt" type="tns:queryOrderInfoForSlt"></xs:element>
+  <xs:complexType name="queryOrderInfoForSlt">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="queryInfo" type="tns:queryOrderInfoForSltQueryBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryOrderInfoForSltResponse" type="tns:queryOrderInfoForSltResponse"></xs:element>
+  <xs:complexType name="queryOrderInfoForSltResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:queryOrderInfoForSltResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getMoneyClass" type="tns:getMoneyClass"></xs:element>
+  <xs:complexType name="getMoneyClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getMoneyClassSearchBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getMoneyClassResponse" type="tns:getMoneyClassResponse"></xs:element>
+  <xs:complexType name="getMoneyClassResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getMoneyClassResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="submitFlightBgApp" type="tns:submitFlightBgApp"></xs:element>
+  <xs:complexType name="submitFlightBgApp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:submitFlightBgAppInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="submitFlightBgAppResponse" type="tns:submitFlightBgAppResponse"></xs:element>
+  <xs:complexType name="submitFlightBgAppResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:submitFlightBgAppResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryFlightSeatNo" type="tns:queryFlightSeatNo"></xs:element>
+  <xs:complexType name="queryFlightSeatNo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:flightSeatNoBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryFlightSeatNoResponse" type="tns:queryFlightSeatNoResponse"></xs:element>
+  <xs:complexType name="queryFlightSeatNoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getRetBeanOfQueryFlightSeatNo"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBySegId" type="tns:searchFlightsBySegId"></xs:element>
+  <xs:complexType name="searchFlightsBySegId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:searchFlightsBySegIdBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchFlightsBySegIdResponse" type="tns:searchFlightsBySegIdResponse"></xs:element>
+  <xs:complexType name="searchFlightsBySegIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:searchFlightsBatchResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryEInvoiceOrders" type="tns:queryEInvoiceOrders"></xs:element>
+  <xs:complexType name="queryEInvoiceOrders">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqBean" type="tns:reqBeanOfTktDetail"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="queryEInvoiceOrdersResponse" type="tns:queryEInvoiceOrdersResponse"></xs:element>
+  <xs:complexType name="queryEInvoiceOrdersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:retBeanOfTktDetail"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cancelFlightBgApp" type="tns:cancelFlightBgApp"></xs:element>
+  <xs:complexType name="cancelFlightBgApp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cancelInfo" type="tns:cancelFlightBgAppInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="cancelFlightBgAppResponse" type="tns:cancelFlightBgAppResponse"></xs:element>
+  <xs:complexType name="cancelFlightBgAppResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cancelFlightBgAppResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookOrder_subCabin" type="tns:bookOrder_subCabin"></xs:element>
+  <xs:complexType name="bookOrder_subCabin">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bookOrder_subCabin" type="tns:bookOrderBookSubCabinBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookOrder_subCabinResponse" type="tns:bookOrder_subCabinResponse"></xs:element>
+  <xs:complexType name="bookOrder_subCabinResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bookOrderResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getOtherFyDetail" type="tns:getOtherFyDetail"></xs:element>
+  <xs:complexType name="getOtherFyDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getOtherFyDetailInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getOtherFyDetailResponse" type="tns:getOtherFyDetailResponse"></xs:element>
+  <xs:complexType name="getOtherFyDetailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getOtherFyDetailResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getFlightsCanBg" type="tns:getFlightsCanBg"></xs:element>
+  <xs:complexType name="getFlightsCanBg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:getFlightsCanBgInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getFlightsCanBgResponse" type="tns:getFlightsCanBgResponse"></xs:element>
+  <xs:complexType name="getFlightsCanBgResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getFlightsCanBgResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookOrder" type="tns:bookOrder"></xs:element>
+  <xs:complexType name="bookOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bookInfo" type="tns:bookOrderBookBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="bookOrderResponse" type="tns:bookOrderResponse"></xs:element>
+  <xs:complexType name="bookOrderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bookOrderResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getFlightSeats" type="tns:getFlightSeats"></xs:element>
+  <xs:complexType name="getFlightSeats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:flightSeatsInfoBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getFlightSeatsResponse" type="tns:getFlightSeatsResponse"></xs:element>
+  <xs:complexType name="getFlightSeatsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getRetFlightSeatsBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="applyReturnTicket2" type="tns:applyReturnTicket2"></xs:element>
+  <xs:complexType name="applyReturnTicket2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="appInfo" type="tns:applyReturnTicketInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="applyReturnTicket2Response" type="tns:applyReturnTicket2Response"></xs:element>
+  <xs:complexType name="applyReturnTicket2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:applyReturnTicketResultBean2"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSpecificPrice" type="tns:getSpecificPrice"></xs:element>
+  <xs:complexType name="getSpecificPrice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="inputInfo" type="tns:getSpecificPriceInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSpecificPriceResponse" type="tns:getSpecificPriceResponse"></xs:element>
+  <xs:complexType name="getSpecificPriceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getSpecificPriceResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getXprodCheckBind" type="tns:getXprodCheckBind"></xs:element>
+  <xs:complexType name="getXprodCheckBind">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:xprodBeanOfCheckBindInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getXprodCheckBindResponse" type="tns:getXprodCheckBindResponse"></xs:element>
+  <xs:complexType name="getXprodCheckBindResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:xprodBeanOfCheckBindResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetInvoice" type="tns:GetInvoice"></xs:element>
+  <xs:complexType name="GetInvoice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="reqBean" type="tns:reqBeanOfGetInvoice"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetInvoiceResponse" type="tns:GetInvoiceResponse"></xs:element>
+  <xs:complexType name="GetInvoiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:retBeanofGetInvoice"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSubProdBooked" type="tns:getSubProdBooked"></xs:element>
+  <xs:complexType name="getSubProdBooked">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:infoBeanOfGetSubProdBooked"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getSubProdBookedResponse" type="tns:getSubProdBookedResponse"></xs:element>
+  <xs:complexType name="getSubProdBookedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getSubProdBookedResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getOrderSumInfo" type="tns:getOrderSumInfo"></xs:element>
+  <xs:complexType name="getOrderSumInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="queryInfo" type="tns:getOrderSumInfoQueryBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="getOrderSumInfoResponse" type="tns:getOrderSumInfoResponse"></xs:element>
+  <xs:complexType name="getOrderSumInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getOrderSumInfoResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="calcRetTktFee" type="tns:calcRetTktFee"></xs:element>
+  <xs:complexType name="calcRetTktFee">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calcInfo" type="tns:calcRetTktFeeInputBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="calcRetTktFeeResponse" type="tns:calcRetTktFeeResponse"></xs:element>
+  <xs:complexType name="calcRetTktFeeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:calcRetTktFeeResultBean"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchReceptionFlights" type="tns:searchReceptionFlights"></xs:element>
+  <xs:complexType name="searchReceptionFlights">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchInfo" type="tns:searchBeanOfReceptionFlights"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="searchReceptionFlightsResponse" type="tns:searchReceptionFlightsResponse"></xs:element>
+  <xs:complexType name="searchReceptionFlightsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:getBeanOfReceptionFlights"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getFlightsCanBgResponse">
+    <wsdl:part element="tns:getFlightsCanBgResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTicketDetail">
+    <wsdl:part element="tns:searchTicketDetail" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBySegIdResponse">
+    <wsdl:part element="tns:searchFlightsBySegIdResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="calcRetTktFee">
+    <wsdl:part element="tns:calcRetTktFee" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFlightBgApp">
+    <wsdl:part element="tns:submitFlightBgApp" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelFlightBgApp">
+    <wsdl:part element="tns:cancelFlightBgApp" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryEInvoiceOrdersResponse">
+    <wsdl:part element="tns:queryEInvoiceOrdersResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFlightBgApp">
+    <wsdl:part element="tns:getFlightBgApp" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSubProdBooked">
+    <wsdl:part element="tns:getSubProdBooked" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOtherFyDetailResponse">
+    <wsdl:part element="tns:getOtherFyDetailResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelOrder">
+    <wsdl:part element="tns:cancelOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSpecificPriceResponse">
+    <wsdl:part element="tns:getSpecificPriceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getXprodCheckBind">
+    <wsdl:part element="tns:getXprodCheckBind" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applyReturnTicket">
+    <wsdl:part element="tns:applyReturnTicket" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBatchResponse">
+    <wsdl:part element="tns:searchFlightsBatchResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getKeguiTotalDescription">
+    <wsdl:part element="tns:getKeguiTotalDescription" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBySegId2Response">
+    <wsdl:part element="tns:searchFlightsBySegId2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSpecificPrice">
+    <wsdl:part element="tns:getSpecificPrice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSubProdBySegResponse">
+    <wsdl:part element="tns:getSubProdBySegResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFlightBgAppResponse">
+    <wsdl:part element="tns:submitFlightBgAppResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSubProdByTkt">
+    <wsdl:part element="tns:getSubProdByTkt" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetInvoice">
+    <wsdl:part element="tns:GetInvoice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getKeguiTotalDescription2">
+    <wsdl:part element="tns:getKeguiTotalDescription2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTravelBaoJiDetailInfo1Response">
+    <wsdl:part element="tns:getTravelBaoJiDetailInfo1Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getXprodCheckBindResponse">
+    <wsdl:part element="tns:getXprodCheckBindResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookOrderResponse">
+    <wsdl:part element="tns:bookOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBySegId2">
+    <wsdl:part element="tns:searchFlightsBySegId2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOtherFyDetail">
+    <wsdl:part element="tns:getOtherFyDetail" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCountryAreaCode">
+    <wsdl:part element="tns:getCountryAreaCode" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="calcRetTktFeeResponse">
+    <wsdl:part element="tns:calcRetTktFeeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFlightBgAppResponse">
+    <wsdl:part element="tns:getFlightBgAppResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSubProdByTktResponse">
+    <wsdl:part element="tns:getSubProdByTktResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookOrder_subCabin">
+    <wsdl:part element="tns:bookOrder_subCabin" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applyReturnTicketResponse">
+    <wsdl:part element="tns:applyReturnTicketResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrderSumInfoResponse">
+    <wsdl:part element="tns:getOrderSumInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTravelBaoJiDetailInfoResponse">
+    <wsdl:part element="tns:getTravelBaoJiDetailInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchReceptionFlightsResponse">
+    <wsdl:part element="tns:searchReceptionFlightsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderResponse">
+    <wsdl:part element="tns:cancelOrderResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSubProdBookedResponse">
+    <wsdl:part element="tns:getSubProdBookedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applyReturnTicket2">
+    <wsdl:part element="tns:applyReturnTicket2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTravelBaoJiDetailInfo">
+    <wsdl:part element="tns:getTravelBaoJiDetailInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryOrderInfoForSlt">
+    <wsdl:part element="tns:queryOrderInfoForSlt" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateInvoiceResponse">
+    <wsdl:part element="tns:CreateInvoiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetInvoiceResponse">
+    <wsdl:part element="tns:GetInvoiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookSubProdBatchResponse">
+    <wsdl:part element="tns:bookSubProdBatchResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryFlightBgAppInfoResponse">
+    <wsdl:part element="tns:queryFlightBgAppInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCountryAreaCodeResponse">
+    <wsdl:part element="tns:getCountryAreaCodeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookSubProdBatch">
+    <wsdl:part element="tns:bookSubProdBatch" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFlightsCanBg">
+    <wsdl:part element="tns:getFlightsCanBg" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrderDetailInfoResponse">
+    <wsdl:part element="tns:getOrderDetailInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFlightSeats">
+    <wsdl:part element="tns:getFlightSeats" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookOrder_subCabinResponse">
+    <wsdl:part element="tns:bookOrder_subCabinResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTravelBaoJiDetailInfo1">
+    <wsdl:part element="tns:getTravelBaoJiDetailInfo1" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMoneyClassResponse">
+    <wsdl:part element="tns:getMoneyClassResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFlightBgApp2">
+    <wsdl:part element="tns:submitFlightBgApp2" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="bookOrder">
+    <wsdl:part element="tns:bookOrder" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="applyReturnTicket2Response">
+    <wsdl:part element="tns:applyReturnTicket2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBatchSPResponse">
+    <wsdl:part element="tns:searchFlightsBatchSPResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getMoneyClass">
+    <wsdl:part element="tns:getMoneyClass" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchReceptionFlights">
+    <wsdl:part element="tns:searchReceptionFlights" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBatchSP">
+    <wsdl:part element="tns:searchFlightsBatchSP" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryEInvoiceOrders">
+    <wsdl:part element="tns:queryEInvoiceOrders" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrderSumInfo">
+    <wsdl:part element="tns:getOrderSumInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryFlightSeatNo">
+    <wsdl:part element="tns:queryFlightSeatNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSubProdBySeg">
+    <wsdl:part element="tns:getSubProdBySeg" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CreateInvoice">
+    <wsdl:part element="tns:CreateInvoice" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchTicketDetailResponse">
+    <wsdl:part element="tns:searchTicketDetailResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrderDetailInfo">
+    <wsdl:part element="tns:getOrderDetailInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBatch">
+    <wsdl:part element="tns:searchFlightsBatch" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryFlightBgAppInfo">
+    <wsdl:part element="tns:queryFlightBgAppInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelFlightBgAppResponse">
+    <wsdl:part element="tns:cancelFlightBgAppResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="submitFlightBgApp2Response">
+    <wsdl:part element="tns:submitFlightBgApp2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryOrderInfoForSltResponse">
+    <wsdl:part element="tns:queryOrderInfoForSltResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getKeguiTotalDescriptionResponse">
+    <wsdl:part element="tns:getKeguiTotalDescriptionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="queryFlightSeatNoResponse">
+    <wsdl:part element="tns:queryFlightSeatNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="searchFlightsBySegId">
+    <wsdl:part element="tns:searchFlightsBySegId" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFlightSeatsResponse">
+    <wsdl:part element="tns:getFlightSeatsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getKeguiTotalDescription2Response">
+    <wsdl:part element="tns:getKeguiTotalDescription2Response" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SpringServiceSearchBookInterface">
+    <wsdl:operation name="getKeguiTotalDescription2">
+      <wsdl:input message="tns:getKeguiTotalDescription2" name="getKeguiTotalDescription2">
+    </wsdl:input>
+      <wsdl:output message="tns:getKeguiTotalDescription2Response" name="getKeguiTotalDescription2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryAreaCode">
+      <wsdl:input message="tns:getCountryAreaCode" name="getCountryAreaCode">
+    </wsdl:input>
+      <wsdl:output message="tns:getCountryAreaCodeResponse" name="getCountryAreaCodeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBySegId2">
+      <wsdl:input message="tns:searchFlightsBySegId2" name="searchFlightsBySegId2">
+    </wsdl:input>
+      <wsdl:output message="tns:searchFlightsBySegId2Response" name="searchFlightsBySegId2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubProdBySeg">
+      <wsdl:input message="tns:getSubProdBySeg" name="getSubProdBySeg">
+    </wsdl:input>
+      <wsdl:output message="tns:getSubProdBySegResponse" name="getSubProdBySegResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrder">
+      <wsdl:input message="tns:cancelOrder" name="cancelOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:cancelOrderResponse" name="cancelOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryFlightBgAppInfo">
+      <wsdl:input message="tns:queryFlightBgAppInfo" name="queryFlightBgAppInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:queryFlightBgAppInfoResponse" name="queryFlightBgAppInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKeguiTotalDescription">
+      <wsdl:input message="tns:getKeguiTotalDescription" name="getKeguiTotalDescription">
+    </wsdl:input>
+      <wsdl:output message="tns:getKeguiTotalDescriptionResponse" name="getKeguiTotalDescriptionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightBgApp">
+      <wsdl:input message="tns:getFlightBgApp" name="getFlightBgApp">
+    </wsdl:input>
+      <wsdl:output message="tns:getFlightBgAppResponse" name="getFlightBgAppResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFlightBgApp2">
+      <wsdl:input message="tns:submitFlightBgApp2" name="submitFlightBgApp2">
+    </wsdl:input>
+      <wsdl:output message="tns:submitFlightBgApp2Response" name="submitFlightBgApp2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvoice">
+      <wsdl:input message="tns:CreateInvoice" name="CreateInvoice">
+    </wsdl:input>
+      <wsdl:output message="tns:CreateInvoiceResponse" name="CreateInvoiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTravelBaoJiDetailInfo1">
+      <wsdl:input message="tns:getTravelBaoJiDetailInfo1" name="getTravelBaoJiDetailInfo1">
+    </wsdl:input>
+      <wsdl:output message="tns:getTravelBaoJiDetailInfo1Response" name="getTravelBaoJiDetailInfo1Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderDetailInfo">
+      <wsdl:input message="tns:getOrderDetailInfo" name="getOrderDetailInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getOrderDetailInfoResponse" name="getOrderDetailInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBatchSP">
+      <wsdl:input message="tns:searchFlightsBatchSP" name="searchFlightsBatchSP">
+    </wsdl:input>
+      <wsdl:output message="tns:searchFlightsBatchSPResponse" name="searchFlightsBatchSPResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubProdByTkt">
+      <wsdl:input message="tns:getSubProdByTkt" name="getSubProdByTkt">
+    </wsdl:input>
+      <wsdl:output message="tns:getSubProdByTktResponse" name="getSubProdByTktResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBatch">
+      <wsdl:input message="tns:searchFlightsBatch" name="searchFlightsBatch">
+    </wsdl:input>
+      <wsdl:output message="tns:searchFlightsBatchResponse" name="searchFlightsBatchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTicketDetail">
+      <wsdl:input message="tns:searchTicketDetail" name="searchTicketDetail">
+    </wsdl:input>
+      <wsdl:output message="tns:searchTicketDetailResponse" name="searchTicketDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookSubProdBatch">
+      <wsdl:input message="tns:bookSubProdBatch" name="bookSubProdBatch">
+    </wsdl:input>
+      <wsdl:output message="tns:bookSubProdBatchResponse" name="bookSubProdBatchResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTravelBaoJiDetailInfo">
+      <wsdl:input message="tns:getTravelBaoJiDetailInfo" name="getTravelBaoJiDetailInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getTravelBaoJiDetailInfoResponse" name="getTravelBaoJiDetailInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyReturnTicket">
+      <wsdl:input message="tns:applyReturnTicket" name="applyReturnTicket">
+    </wsdl:input>
+      <wsdl:output message="tns:applyReturnTicketResponse" name="applyReturnTicketResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOrderInfoForSlt">
+      <wsdl:input message="tns:queryOrderInfoForSlt" name="queryOrderInfoForSlt">
+    </wsdl:input>
+      <wsdl:output message="tns:queryOrderInfoForSltResponse" name="queryOrderInfoForSltResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMoneyClass">
+      <wsdl:input message="tns:getMoneyClass" name="getMoneyClass">
+    </wsdl:input>
+      <wsdl:output message="tns:getMoneyClassResponse" name="getMoneyClassResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFlightBgApp">
+      <wsdl:input message="tns:submitFlightBgApp" name="submitFlightBgApp">
+    </wsdl:input>
+      <wsdl:output message="tns:submitFlightBgAppResponse" name="submitFlightBgAppResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryFlightSeatNo">
+      <wsdl:input message="tns:queryFlightSeatNo" name="queryFlightSeatNo">
+    </wsdl:input>
+      <wsdl:output message="tns:queryFlightSeatNoResponse" name="queryFlightSeatNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBySegId">
+      <wsdl:input message="tns:searchFlightsBySegId" name="searchFlightsBySegId">
+    </wsdl:input>
+      <wsdl:output message="tns:searchFlightsBySegIdResponse" name="searchFlightsBySegIdResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryEInvoiceOrders">
+      <wsdl:input message="tns:queryEInvoiceOrders" name="queryEInvoiceOrders">
+    </wsdl:input>
+      <wsdl:output message="tns:queryEInvoiceOrdersResponse" name="queryEInvoiceOrdersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelFlightBgApp">
+      <wsdl:input message="tns:cancelFlightBgApp" name="cancelFlightBgApp">
+    </wsdl:input>
+      <wsdl:output message="tns:cancelFlightBgAppResponse" name="cancelFlightBgAppResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookOrder_subCabin">
+      <wsdl:input message="tns:bookOrder_subCabin" name="bookOrder_subCabin">
+    </wsdl:input>
+      <wsdl:output message="tns:bookOrder_subCabinResponse" name="bookOrder_subCabinResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOtherFyDetail">
+      <wsdl:input message="tns:getOtherFyDetail" name="getOtherFyDetail">
+    </wsdl:input>
+      <wsdl:output message="tns:getOtherFyDetailResponse" name="getOtherFyDetailResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightsCanBg">
+      <wsdl:input message="tns:getFlightsCanBg" name="getFlightsCanBg">
+    </wsdl:input>
+      <wsdl:output message="tns:getFlightsCanBgResponse" name="getFlightsCanBgResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookOrder">
+      <wsdl:input message="tns:bookOrder" name="bookOrder">
+    </wsdl:input>
+      <wsdl:output message="tns:bookOrderResponse" name="bookOrderResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightSeats">
+      <wsdl:input message="tns:getFlightSeats" name="getFlightSeats">
+    </wsdl:input>
+      <wsdl:output message="tns:getFlightSeatsResponse" name="getFlightSeatsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyReturnTicket2">
+      <wsdl:input message="tns:applyReturnTicket2" name="applyReturnTicket2">
+    </wsdl:input>
+      <wsdl:output message="tns:applyReturnTicket2Response" name="applyReturnTicket2Response">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificPrice">
+      <wsdl:input message="tns:getSpecificPrice" name="getSpecificPrice">
+    </wsdl:input>
+      <wsdl:output message="tns:getSpecificPriceResponse" name="getSpecificPriceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXprodCheckBind">
+      <wsdl:input message="tns:getXprodCheckBind" name="getXprodCheckBind">
+    </wsdl:input>
+      <wsdl:output message="tns:getXprodCheckBindResponse" name="getXprodCheckBindResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <wsdl:input message="tns:GetInvoice" name="GetInvoice">
+    </wsdl:input>
+      <wsdl:output message="tns:GetInvoiceResponse" name="GetInvoiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubProdBooked">
+      <wsdl:input message="tns:getSubProdBooked" name="getSubProdBooked">
+    </wsdl:input>
+      <wsdl:output message="tns:getSubProdBookedResponse" name="getSubProdBookedResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderSumInfo">
+      <wsdl:input message="tns:getOrderSumInfo" name="getOrderSumInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getOrderSumInfoResponse" name="getOrderSumInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcRetTktFee">
+      <wsdl:input message="tns:calcRetTktFee" name="calcRetTktFee">
+    </wsdl:input>
+      <wsdl:output message="tns:calcRetTktFeeResponse" name="calcRetTktFeeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchReceptionFlights">
+      <wsdl:input message="tns:searchReceptionFlights" name="searchReceptionFlights">
+    </wsdl:input>
+      <wsdl:output message="tns:searchReceptionFlightsResponse" name="searchReceptionFlightsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SpringServiceSearchBookInterfaceServiceSoapBinding" type="tns:SpringServiceSearchBookInterface">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="getKeguiTotalDescription2">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getKeguiTotalDescription2">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getKeguiTotalDescription2Response">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountryAreaCode">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getCountryAreaCode">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getCountryAreaCodeResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBySegId2">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="searchFlightsBySegId2">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="searchFlightsBySegId2Response">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrder">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="cancelOrder">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="cancelOrderResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubProdBySeg">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getSubProdBySeg">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getSubProdBySegResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getKeguiTotalDescription">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getKeguiTotalDescription">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getKeguiTotalDescriptionResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryFlightBgAppInfo">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="queryFlightBgAppInfo">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="queryFlightBgAppInfoResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightBgApp">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getFlightBgApp">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getFlightBgAppResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFlightBgApp2">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="submitFlightBgApp2">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="submitFlightBgApp2Response">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInvoice">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="CreateInvoice">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="CreateInvoiceResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderDetailInfo">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getOrderDetailInfo">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getOrderDetailInfoResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTravelBaoJiDetailInfo1">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getTravelBaoJiDetailInfo1">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getTravelBaoJiDetailInfo1Response">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBatchSP">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="searchFlightsBatchSP">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="searchFlightsBatchSPResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubProdByTkt">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getSubProdByTkt">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getSubProdByTktResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBatch">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="searchFlightsBatch">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="searchFlightsBatchResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookSubProdBatch">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="bookSubProdBatch">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="bookSubProdBatchResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchTicketDetail">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="searchTicketDetail">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="searchTicketDetailResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyReturnTicket">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="applyReturnTicket">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="applyReturnTicketResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTravelBaoJiDetailInfo">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getTravelBaoJiDetailInfo">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getTravelBaoJiDetailInfoResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOrderInfoForSlt">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="queryOrderInfoForSlt">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="queryOrderInfoForSltResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMoneyClass">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getMoneyClass">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getMoneyClassResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryFlightSeatNo">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="queryFlightSeatNo">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="queryFlightSeatNoResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="submitFlightBgApp">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="submitFlightBgApp">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="submitFlightBgAppResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchFlightsBySegId">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="searchFlightsBySegId">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="searchFlightsBySegIdResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryEInvoiceOrders">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="queryEInvoiceOrders">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="queryEInvoiceOrdersResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelFlightBgApp">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="cancelFlightBgApp">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="cancelFlightBgAppResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookOrder_subCabin">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="bookOrder_subCabin">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="bookOrder_subCabinResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOtherFyDetail">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getOtherFyDetail">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getOtherFyDetailResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightsCanBg">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getFlightsCanBg">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getFlightsCanBgResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bookOrder">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="bookOrder">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="bookOrderResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="applyReturnTicket2">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="applyReturnTicket2">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="applyReturnTicket2Response">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFlightSeats">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getFlightSeats">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getFlightSeatsResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificPrice">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getSpecificPrice">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getSpecificPriceResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getXprodCheckBind">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getXprodCheckBind">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getXprodCheckBindResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInvoice">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="GetInvoice">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="GetInvoiceResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSubProdBooked">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getSubProdBooked">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getSubProdBookedResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="calcRetTktFee">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="calcRetTktFee">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="calcRetTktFeeResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderSumInfo">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="getOrderSumInfo">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="getOrderSumInfoResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchReceptionFlights">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="searchReceptionFlights">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="searchReceptionFlightsResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SpringServiceSearchBookInterfaceService">
+    <wsdl:port binding="tns:SpringServiceSearchBookInterfaceServiceSoapBinding" name="SpringServiceSearchBookInterfacePort">
+      <soap:address location="http://101.230.218.72:2001/AirSalesService/springairlines/remoteservice/jike"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

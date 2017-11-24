@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.springboot.study.service.saws.*;
 
+import java.util.List;
+
 public class SpringAirService {
 	/**
 	 * 身份证验证
@@ -91,6 +93,108 @@ public class SpringAirService {
 ////        inBean.setSearchFlag(2);
 //        SearchFlightsBatchResultBean rtb = port.searchFlightsBatchSP(inBean);
 
+		// 计算订单金额（售前）
+		/*GetSpecificPriceInputBean inBean = new GetSpecificPriceInputBean();
+		inBean.setSegType("N");
+		inBean.setLang("zh_cn");
+		inBean.setMoneyClassId(0);
+		inBean.setUsernameToken(token);
+		List<Long> segHeadIds = inBean.getSegHeadIds();
+		segHeadIds.add(708470l);
+		List<String> cabinNames = inBean.getCabinNames();
+		cabinNames.add("R4");
+		List<Integer> cabinTypes = inBean.getCabinTypes();
+		cabinTypes.add(1);
+		GetSpecificPriceResultBean rtb = port.getSpecificPrice(inBean);*/
+
+		/*
+		// 预定订单
+		BookOrderBookBean inBean = new BookOrderBookBean();
+		inBean.setUsernameToken(token);
+		inBean.setLang("zh_cn");
+		inBean.setMoneyClassId(0);
+		inBean.setLcType("N");
+		inBean.setFirstSegId(708471l);
+		inBean.setFirstSegAdultCabin("R1");
+		inBean.setAdultNum(1);
+		inBean.setChildNum(0);
+		inBean.setInfantNum(0);
+		inBean.setLinkmanName("李刚");
+		inBean.setLinkmanWorkTel("13307331433");
+		inBean.setRemoteIp("127.0.0.1");
+		List<PassengerBookInfo> infos = inBean.getFirstSegPassengerInfo();
+		PassengerBookInfo info0 = new PassengerBookInfo();
+		PassengerDetailInfo info00 = new PassengerDetailInfo();
+		info00.setAge(27);
+		info00.setCardTypeId(1);
+		info00.setCardNo("410020199801029777");
+		info00.setFamilyName("李");
+		info00.setPassengerType(1);
+		info00.setBirthdate("1990-01-02");
+		info0.setPassengerDetailInfo(info00);
+		List<InsuranceBookInfo> insuranceInfo = info0.getInsuranceInfo();
+		List<XprodBookInfo> xprodInfo = info0.getXprodInfo();
+		XprodBookInfo prod = new XprodBookInfo();
+		prod.setXprodNum(1);
+		prod.setXprodId(25);
+		// prod.setAddInfo("1663070");
+		xprodInfo.add(prod);
+		infos.add(info0);
+//		insuranceInfo
+//		xprodInfo
+		BookOrderResultBean rtb = port.bookOrder(inBean);*/
+//		{"errCode":null,"ifSuccess":"Y","orderNo":"QVRJBH","payMoney":450.0}
+//		{"errCode":null,"ifSuccess":"Y","orderNo":"QVRJBR","payMoney":450.0}QVRJBU\QVRJBX\QVRJCA\QVRJCD
+		// 查询订单明细
+		GetOrderDetailInfoQueryBean inBean = new GetOrderDetailInfoQueryBean();
+		inBean.setLang("zh_cn");
+		inBean.setUsernameToken(token);
+//		inBean.setOrderNo("QVRJBH");
+		inBean.setOrderNo("QVRJCD");
+		GetOrderDetailInfoResultBean rtb = port.getOrderDetailInfo(inBean);
+		// {"errCode":null,"ifSuccess":"Y","orderSumInfo":{"bookTime":"2017-11-23 10:15:11","linkmanName":"李刚","linkmanWorkTel":"13307331233","moneyClassId":0,"orderMoney":450.0,"orderNo":"QVRJBH","payFlag":0},"ticketList":[{"flightBasicInfo":{"acType":"A320","destEndPoint":{"airportCityInfo":{"airportCode":"SYX","airportName":"凤凰","airportTerminal":null,"cityCode":"SYX","cityName":"三亚"},"destTimeInfo":{"localCityCode":"SYX","timeBJ":"2017-11-26 20:00:00","timeLocal":"2017-11-26 20:00:00","timeLocalSys":0},"oriTimeInfo":null},"firstStopover":null,"flightNo":"9C9955","flightStatus":0,"fuelFee":0.0,"oriEndPoint":{"airportCityInfo":{"airportCode":"PVG","airportName":"浦东T2航站楼","airportTerminal":null,"cityCode":"SHA","cityName":"上海"},"destTimeInfo":null,"oriTimeInfo":{"localCityCode":"SHA","timeBJ":"2017-11-26 18:00:00","timeLocal":"2017-11-26 18:00:00","timeLocalSys":0}},"portPay":50.0,"pubPrice":1990.0,"routeAreaFlag":1,"secondStopover":null,"segHeadId":708470},"passengerDetailInfo":{"age":27,"birthdate":"1990-01-02","cardNo":"410020199001029888","cardTypeId":1,"countryOfIssue":null,"familyName":"李","gender":null,"nationality":null,"passengerType":1,"passportExpireDate":null,"personalName":null,"phoneNo":null},"ticketBasicInfo":{"fuelPrice":0.0,"insFee":0.0,"lcHeadId":null,"orderHeadId":109602984,"orderNo":"QVRJBH","otherFy":0.0,"payGateFy":0.0,"portPay":50.0,"seatName":"R4","segHeadId":708470,"tktFlag":2,"tktNo":null,"tktPrice":400.0,"tktType":1,"wfHeadId":109602984,"xprodFee":0.0}}]}
+		// {"errCode":null,"ifSuccess":"Y","orderSumInfo":{"bookTime":"2017-11-23 15:22:07","linkmanName":"李刚","linkmanWorkTel":"13307331233","moneyClassId":0,"orderMoney":450.0,"orderNo":"QVRJBR","payFlag":0},"ticketList":[{"flightBasicInfo":{"acType":"A320","destEndPoint":{"airportCityInfo":{"airportCode":"SYX","airportName":"凤凰","airportTerminal":null,"cityCode":"SYX","cityName":"三亚"},"destTimeInfo":{"localCityCode":"SYX","timeBJ":"2017-11-29 20:00:00","timeLocal":"2017-11-29 20:00:00","timeLocalSys":0},"oriTimeInfo":null},"firstStopover":null,"flightNo":"9C9955","flightStatus":0,"fuelFee":0.0,"oriEndPoint":{"airportCityInfo":{"airportCode":"PVG","airportName":"浦东T2航站楼","airportTerminal":null,"cityCode":"SHA","cityName":"上海"},"destTimeInfo":null,"oriTimeInfo":{"localCityCode":"SHA","timeBJ":"2017-11-29 18:00:00","timeLocal":"2017-11-29 18:00:00","timeLocalSys":0}},"portPay":50.0,"pubPrice":1990.0,"routeAreaFlag":1,"secondStopover":null,"segHeadId":708473},"passengerDetailInfo":{"age":27,"birthdate":"1990-01-02","cardNo":"410020199001029888","cardTypeId":1,"countryOfIssue":null,"familyName":"李","gender":null,"nationality":null,"passengerType":1,"passportExpireDate":null,"personalName":null,"phoneNo":null},"ticketBasicInfo":{"fuelPrice":0.0,"insFee":0.0,"lcHeadId":null,"orderHeadId":109602995,"orderNo":"QVRJBR","otherFy":0.0,"payGateFy":0.0,"portPay":50.0,"seatName":"R4","segHeadId":708473,"tktFlag":2,"tktNo":null,"tktPrice":400.0,"tktType":1,"wfHeadId":109602995,"xprodFee":0.0}}]}
+		// 查询其他税费明细
+		/*GetOtherFyDetailInputBean inBean = new GetOtherFyDetailInputBean();
+		inBean.setLang("zh_cn");
+		inBean.setUsernameToken(token);
+		inBean.setOrderHeadId(109602984l);
+		GetOtherFyDetailResultBean rtb = port.getOtherFyDetail(inBean);*/
+		// 查询订单汇总信息
+		/*GetOrderSumInfoQueryBean inBean = new GetOrderSumInfoQueryBean();
+		inBean.setUsernameToken(token);
+		inBean.setOrderNo("QVRJBH");
+		GetOrderSumInfoResultBean rtb = port.getOrderSumInfo(inBean);*/
+//		{"errCode":null,"ifSuccess":"Y","orderSumInfo":{"bookTime":"2017-11-23 10:15:11","linkmanName":"李刚","linkmanWorkTel":"13307331233","moneyClassId":0,"orderMoney":450.0,"orderNo":"QVRJBH","payFlag":0}}
+		// 辅助产品售前查询——生成航空订单前
+		/*GetSubProdBySegInputBean inBean = new GetSubProdBySegInputBean();
+		inBean.setUsernameToken(token);
+		inBean.setLang("zh_cn");
+		inBean.setMoneyClassId(0l);
+		inBean.setThisSegHeadId(708471l);
+		inBean.setThisSegHeadType(1);
+		inBean.setAdultTktPrice(720d);
+		inBean.setAdultCabinName("R1");
+		inBean.setTktType(1);
+		List<Long> queryXtypeRange = inBean.getQueryXtypeRange();
+		queryXtypeRange.add(1l);
+		queryXtypeRange.add(2l);
+		queryXtypeRange.add(3l);
+		queryXtypeRange.add(4l);
+		queryXtypeRange.add(6l);
+		queryXtypeRange.add(7l);
+		queryXtypeRange.add(8l);
+		queryXtypeRange.add(9l);
+		queryXtypeRange.add(10l);
+		queryXtypeRange.add(12l);
+		queryXtypeRange.add(14l);
+		GetSubProdBySegResultBean rtb = port.getSubProdBySeg(inBean);*/
+
+		// 取消订单
+		/*CancelOrderInputBean inBean = new CancelOrderInputBean();
+		inBean.setUsernameToken(token);
+		inBean.setOrderNo("QVRJCD");
+		CancelOrderResultBean rtb = port.cancelOrder(inBean);*/
 		ObjectMapper o = new ObjectMapper();
 		try {
 			System.out.println(o.writeValueAsString(inBean));
