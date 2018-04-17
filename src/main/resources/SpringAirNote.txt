@@ -53,6 +53,8 @@ http://101.230.218.72:2001/AirSalesService/springairlines/remoteservice/jike?wsd
 舱位等级
 舱位名称
 
+flightutil
+public static void formatDate(List<PlaneODModel> podms, List<String> flights) {
 春秋航空只有经济舱：商务座是在经济舱基础上增加服务产品的商务经济座
 
 春秋航空航班计划时刻表：
@@ -66,3 +68,8 @@ https://flights.ch.com/flight-date
 
 
 活动舱（五折以下的舱位）不用理会
+
+
+有没有按照日期查询的接口
+
+

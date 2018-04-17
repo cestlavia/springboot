@@ -78,6 +78,11 @@ public class HelloWorld {
     }
 
     public static void main(String[] args) {
+        short s1 = 128;
+        byte b1 = 127;
+        s1 += 1;
+        // s1 = s1 +1;编译错误
+        float f1 = 3.4f;
         System.out.println();
         Random r = new Random(100);
         for (int j = 0; j < r.nextInt(); j++) {
